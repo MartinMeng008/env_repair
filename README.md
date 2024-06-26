@@ -10,7 +10,7 @@ This code requires python > 3 and has been tested on python 3.8.10 and Ubuntu 20
 
 ### Required repositories
 
-- This [fork](https://github.com/MartinMeng008/synthesis_based_repair) of synthesis_based_repair
+- This [fork](https://github.com/MartinMeng008/synthesis_based_repair) of synthesis_based_repair and its dependencies
 - This [fork](https://github.com/MartinMeng008/slugs) of slugs
 - This [repo](https://github.com/MartinMeng008/cs4750) containing helper functions
 
