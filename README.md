@@ -4,6 +4,11 @@
 
 This repository provides the code associated with the paper [Automated Robot Recovery from Assumption Violations of High-level Specifications]()
 
+env_relax_repair is the first framework that enables robot to automatically recover from environment assumption violations of high-level specifications during task execution. We create a monitor to detect assumption violations during the task execution, relax the violated assumptions to admit observed environment behaviors, and obtain new robot skills for task completion.
+
+![overview]()
+
+
 ## Setup
 
 This code requires python > 3 and has been tested on python 3.8.10 and Ubuntu 20.04
@@ -68,10 +73,15 @@ source devel/setup.bash
 ```
 
 ## Usage
-Todo
+The
+
+### Inputs
+
+#### Workspace
+
 
 ## Reference
-If you find this project inspiring, please kindly cite:
+If you use this repository or find this project interesting, please kindly cite:
 
 ```bib
 Todo
