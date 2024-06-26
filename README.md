@@ -10,20 +10,39 @@ This code requires python > 3 and has been tested on python 3.8.10 and Ubuntu 20
 
 ### Required repositories
 
-- This [fork](https://github.com/MartinMeng008/synthesis_based_repair) of synthesis_based_repair and its dependencies:
-  - dd package to handle BDDs (https://github.com/tulip-control/dd)
-- This [fork](https://github.com/MartinMeng008/slugs) of slugs. The path to the src directory should be added to PATH.
+- This [fork](https://github.com/MartinMeng008/synthesis_based_repair) of synthesis_based_repair and its dependencies should be installed and added to the PATH:
+  - [BDD package](https://github.com/tulip-control/dd)
+
+  ```shell
+  git clone -b env_relax_repair https://github.com/MartinMeng008/synthesis_based_repair.git
+  export PATH=[parent_dir_of_synthesis_based_repair]/synthesis_based_repair/synthesis_based_repair
+  git clone https://github.com/tulip-control/dd.git
+  cd dd
+  pip install cython
+  python setup.py install --fetch --cudd
+  ```
+
+- This [fork](https://github.com/MartinMeng008/slugs) of slugs. The path to the src and parser directory should be added to PATH.
+
   ```shell
   git clone https://github.com/MartinMeng008/slugs.git
   export PATH=[parent_dir_of_slugs]/slugs/src:$PATH
+  export PATH=[parent_dir_of_slugs]/slugs/tools/StructuredSlugsParser:$PATH
   ```
-- This [repo](https://github.com/MartinMeng008/cs4750) containing helper functions should be installed in the catkin_ws directory of ROS:
-  ```shell
+- ROS. This code has been tested on ROS Noetic. Follow the installation [instructions](http://wiki.ros.org/ROS/Installation).
+- This [repo](https://github.com/MartinMeng008/cs4750) containing helper functions should be installed in ROS catkin_ws directory:
+
+   ```shell
   cd [parent_dir_of_catkin]/catkin_ws/src
   git clone https://github.com/MartinMeng008/cs4750.git
-  cd ..
-  catkin build
-  ``` 
+  ```
+
+- Hello Robot Stretch ROS [package](https://github.com/hello-robot/stretch_ros):
+
+   ```shell
+  cd [parent_dir_of_catkin]/catkin_ws/src
+  git clone https://github.com/hello-robot/stretch_ros.git
+   ```
 
 ### Required python packages
 - argparse
@@ -38,14 +57,22 @@ pip install argparse matplotlib networkx numpy shapley z3
 ```
 
 ### Installation
-Clone the repository:
+Clone the repository to the catkin_ws directory:
 
 ```shell
+cd [parent_dir_of_catkin]/catkin_ws/src
 git clone https://github.com/MartinMeng008/env_relax_repair.git
+cd ..
+catkin build
+source devel/setup.bash
 ```
 
 ## Usage
 Todo
 
 ## Reference
+If you find this project inspiring, please kindly cite:
+
+```bib
 Todo
+```
