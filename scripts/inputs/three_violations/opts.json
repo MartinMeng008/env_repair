@@ -1,0 +1,18 @@
+{
+    "return_with_one_repair": true,
+    "run_original": false,
+    "only_synthesis": false,
+    "enforce_reactive_variables": true,
+    "suggestions": "none",
+    "do_names": true,
+    "post_first": false,
+    "mobile_repair": true,
+    "post_repair_cnt": 0,
+    "to_file": false,
+    "fid_base": "none",
+    "n_factors": 5,
+    "n_dims": 3,
+    "generate_figure": "",
+    "n_seeds": 42,
+    "max_repair_cnt": 40
+  }

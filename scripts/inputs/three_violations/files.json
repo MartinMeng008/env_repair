@@ -1,0 +1,18 @@
+{
+    "objects": "inputs/three_violations/abstraction/objects.json",
+    "locations": "inputs/three_violations/abstraction/locations.json",
+    "user_inputs": "inputs/three_violations/abstraction/user_inputs.json",
+    "inputs": "inputs/three_violations/test/inputs.json",
+    "controllable_inputs": "inputs/three_violations/test/controllable_inputs.json",
+    "uncontrollable_inputs": "inputs/three_violations/test/uncontrollable_inputs.json",
+    "controllable_mobile_inputs": "inputs/three_violations/test/controllable_mobile_inputs.json",
+    "controllable_manipulation_inputs": "inputs/three_violations/test/controllable_manipulation_inputs.json",
+    "log_grounding": "build/log_grounding.txt",
+    "skills": "inputs/three_violations/abstraction/skills.json",
+    "structuredslugsplus": "build/spec.structuredslugsplus",
+    "relaxed_spec": "build/relaxed_spec.structuredslugsplus",
+    "repaired_spec": "build/repaired_spec.structuredslugsplus",
+    "slugsin": "build/spec.slugsin",
+    "opts": "inputs/three_violations/opts.json",
+    "spec_json": "inputs/three_violations/spec.json"
+}

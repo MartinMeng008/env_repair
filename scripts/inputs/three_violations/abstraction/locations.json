@@ -1,0 +1,89 @@
+{
+    "t": {
+        "dims": [0, 1, 2],
+        "name": "t",
+        "index": 0,
+        "bounds": [[1.6, 1.98], [-0.81, 0.7], [0.7, 0.87]],
+        "type": "manipulation",
+        "is_robot_location": false
+    },
+    "k0": {
+        "dims": [0, 1, 2],
+        "name": "k0",
+        "index": 1,
+        "bounds": [[-1.64, -1.45], [0.19, 0.50], [0.7, 0.85]],
+        "type": "manipulation",
+        "is_robot_location": false
+    },
+    "k1": {
+        "dims": [0, 1, 2],
+        "name": "k1",
+        "index": 2,
+        "bounds": [[-1.64, -1.45], [0.06, 0.19], [0.7, 0.87]],
+        "type": "manipulation",
+        "is_robot_location": false
+    },
+    "k2": {
+        "dims": [0, 1, 2],
+        "name": "k2",
+        "index": 3,
+        "bounds": [[-1.83, -1.64], [0.06, 0.19], [0.7, 0.85]],
+        "type": "manipulation",
+        "is_robot_location": false
+    },
+    "k3": {
+        "dims": [0, 1, 2],
+        "name": "k3",
+        "index": 4,
+        "bounds": [[-1.64, -1.45], [-0.15, 0.06], [0.7, 0.85]],
+        "type": "manipulation",
+        "is_robot_location": false
+    },
+    "x0": {
+        "dims": [0, 1, 2],
+        "name": "x0",
+        "index": 2,
+        "bounds": [[0.64, 1.6], [-0.34, 0.7], [0, 0.15]],
+        "type": "mobile",
+        "is_robot_location": false
+    },
+    "x1": {
+        "dims": [0, 1, 2],
+        "name": "x1",
+        "index": 3,
+        "bounds": [[-0.4, 0.64], [0.18, 0.7], [0, 0.15]],
+        "type": "mobile",
+        "is_robot_location": false
+    },
+    "x2": {
+        "dims": [0, 1, 2],
+        "name": "x2",
+        "index": 4,
+        "bounds": [[-0.4, 0.64], [-0.34, 0.18], [0, 0.15]],
+        "type": "mobile",
+        "is_robot_location": false
+    },
+    "x3": {
+        "dims": [0, 1, 2],
+        "name": "x3",
+        "index": 5,
+        "bounds": [[-0.4, 1.6], [-0.81, -0.34], [0, 0.15]],
+        "type": "mobile",
+        "is_robot_location": false
+    },
+    "x4": {
+        "dims": [0, 1, 2],
+        "name": "x4",
+        "index": 6,
+        "bounds": [[-1.49, -0.4], [-0.81, 0.7], [0, 0.15]],
+        "type": "mobile",
+        "is_robot_location": false
+    },
+    "ee": {
+        "dims": [],
+        "name": "ee",
+        "index": 7,
+        "type": "manipulation",
+        "is_robot_location": true
+    }
+}

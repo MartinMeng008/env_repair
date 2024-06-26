@@ -1,0 +1,81 @@
+{
+    "skill0": {
+        "name": "skill0", 
+        "primitive_skill": "movebase", 
+        "type": "mobile", 
+        "goal_type": "region", 
+        "initial_preconditions": [{"p_base_x0": true, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": false, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}], 
+        "intermediate_states": [[{"p_base_x0": true, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": false, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}, [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": true, "p_base_x3": false, "p_base_x4": false, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}]], [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": true, "p_base_x3": false, "p_base_x4": false, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}, [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": true, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}]]], 
+        "final_postconditions": [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": true, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}]
+    },
+    
+    "skill1": {
+        "name": "skill1", 
+        "primitive_skill": "movebase", 
+        "type": "mobile", 
+        "goal_type": "region", 
+        "initial_preconditions": [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": true, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}], 
+        "intermediate_states": [[{"p_base_x0": false, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": true, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}, [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": true, "p_base_x3": false, "p_base_x4": false, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}]], [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": true, "p_base_x3": false, "p_base_x4": false, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}, [{"p_base_x0": true, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": false, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}]]], 
+        "final_postconditions": [{"p_base_x0": true, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": false, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}]
+    },
+    
+    "skill2": {
+        "name": "skill2", 
+        "primitive_skill": "pickup", 
+        "type": "manipulation", 
+        "goal_type": "object", 
+        "initial_preconditions": [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": true, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": true, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": false}], 
+        "intermediate_states": [[{"p_base_x0": false, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": true, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": true, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": false}, [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": true, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}]]], 
+        "final_postconditions": [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": true, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}]},
+
+    "skill3": {
+        "name": "skill3", 
+        "primitive_skill": "pickup", 
+        "type": "manipulation", 
+        "goal_type": "object", 
+        "initial_preconditions": [{"p_base_x0": true, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": false, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": true, "p_cup_ee": false}], 
+        "intermediate_states": [[{"p_base_x0": true, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": false, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": true, "p_cup_ee": false}, [{"p_base_x0": true, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": false, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}]]], 
+        "final_postconditions": [{"p_base_x0": true, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": false, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}]
+    },
+
+    "skill4": {
+        "name": "skill4", 
+        "primitive_skill": "pickup", 
+        "type": "manipulation", 
+        "goal_type": "object", 
+        "initial_preconditions": [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": true, "p_block_k0": false, "p_block_k1": true, "p_block_k2": false, "p_block_k3": false, "p_block_t": false, "p_block_ee": false}], 
+        "intermediate_states": [[{"p_base_x0": false, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": true, "p_block_k0": false, "p_block_k1": true, "p_block_k2": false, "p_block_k3": false, "p_block_t": false, "p_block_ee": false}, [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": true, "p_block_k0": false, "p_block_k1": false, "p_block_k2": false, "p_block_k3": false, "p_block_t": false, "p_block_ee": true}]]], 
+        "final_postconditions": [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": true, "p_block_k0": false, "p_block_k1": false, "p_block_k2": false, "p_block_k3": false, "p_block_t": false, "p_block_ee": true}]
+    },
+
+    "skill5": {
+        "name": "skill5", 
+        "primitive_skill": "dropoff", 
+        "type": "manipulation", 
+        "goal_type": "region", 
+        "initial_preconditions": [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": true, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}], 
+        "intermediate_states": [[{"p_base_x0": false, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": true, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}, [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": true, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": true, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": false}]]], 
+        "final_postconditions": [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": true, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": true, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": false}]
+    },
+
+    "skill6": {
+        "name": "skill6", 
+        "primitive_skill": "dropoff", 
+        "type": "manipulation", 
+        "goal_type": "region", 
+        "initial_preconditions": [{"p_base_x0": true, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": false, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}], 
+        "intermediate_states": [[{"p_base_x0": true, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": false, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}, [{"p_base_x0": true, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": false, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": true, "p_cup_ee": false}]]], 
+        "final_postconditions": [{"p_base_x0": true, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": false, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": true, "p_cup_ee": false}]
+    },
+
+    "skill7": {
+        "name": "skill7", 
+        "primitive_skill": "dropoff", 
+        "type": "manipulation", 
+        "goal_type": "region", 
+        "initial_preconditions": [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": true, "p_block_k0": false, "p_block_k1": false, "p_block_k2": false, "p_block_k3": false, "p_block_t": false, "p_block_ee": true}], 
+        "intermediate_states": [[{"p_base_x0": false, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": true, "p_block_k0": false, "p_block_k1": false, "p_block_k2": false, "p_block_k3": false, "p_block_t": false, "p_block_ee": true}, [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": true, "p_block_k0": false, "p_block_k1": false, "p_block_k2": false, "p_block_k3": true, "p_block_t": false, "p_block_ee": false}]]], 
+        "final_postconditions": [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": true, "p_block_k0": false, "p_block_k1": false, "p_block_k2": false, "p_block_k3": true, "p_block_t": false, "p_block_ee": false}]
+    }
+
+}

@@ -1,0 +1,32 @@
+{
+    "cup": {
+        "index": 0,
+        "name": "cup",
+        "type": "manipulation",
+        "category": "controllable"
+    },
+    "base": {
+        "index": 1,
+        "name": "base",
+        "type": "mobile",
+        "category": "controllable"
+    },
+    "cone": {
+        "index": 2,
+        "name": "cone",
+        "type": "mobile",
+        "category": "uncontrollable"
+    },
+    "block": {
+        "index": 1,
+        "name": "block",
+        "type": "manipulation",
+        "category": "controllable"
+    },
+    "plate": {
+        "index": 4,
+        "name": "plate",
+        "type": "manipulation",
+        "category": "uncontrollable"
+    }
+}
