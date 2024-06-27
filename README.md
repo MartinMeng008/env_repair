@@ -80,7 +80,22 @@ source devel/setup.bash
 ### Inputs
 
 #### Workspace
+The user provides a `json` file that defines each region in the workspace as a rectangular box, e.g.:
+```json
+{
+  "t": {
+    "dims": [0, 1, 2],
+    "name": "t",
+    "index": 0,
+    "bounds": [[1.6, 1.98], [-0.81, 0.7], [0.7, 0.87]],
+    "type": "manipulation",
+    "is_robot_location": false
+    }
+}
+```
+where `dims` defines the dimensions, `bounds` defines the low and up bounds on each dimension, `type` defines whether the region is a manipulation region or mobile region, and `is_robot_location` defines whether the region is a part of the robot, such as the robot's end effector.
 
+In the demonstration, we define the regions in the file [`locations.json`](scripts/inputs/three_violations/abstraction/locations.json)
 #### Objects
 
 #### Skills
