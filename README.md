@@ -6,7 +6,8 @@ This repository provides the code associated with the paper [Automated Robot Rec
 
 env_relax_repair is the first framework that enables robot to automatically recover from environment assumption violations of high-level specifications during task execution. We create a monitor to detect assumption violations during the task execution, relax the violated assumptions to admit observed environment behaviors, and obtain new robot skills for task completion.
 
-![overview](workflow.png)
+<!-- ![overview](workflow.png) -->
+<img src=workflow.png alt="overview" width="700">
 
 
 ## Setup
@@ -73,11 +74,12 @@ source devel/setup.bash
 ```
 
 ## Usage
-The
 
 ### Inputs
 
 #### Workspace
+
+#### 
 
 
 ## Reference
