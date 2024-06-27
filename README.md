@@ -19,11 +19,11 @@ This code requires python > 3 and has been tested on python 3.8.10 and Ubuntu 20
 ### Required repositories
 
 - This [fork](https://github.com/MartinMeng008/synthesis_based_repair) of synthesis_based_repair and its dependencies should be installed and added to the PATH:
-  - [BDD package](https://github.com/tulip-control/dd)
+  - [BDD package](https://github.com/tulip-control/dd).
 
   ```shell
   git clone -b env_relax_repair https://github.com/MartinMeng008/synthesis_based_repair.git
-  export PATH=[parent_dir_of_synthesis_based_repair]/synthesis_based_repair/synthesis_based_repair
+  export PATH=[parent_dir_of_synthesis_based_repair]/synthesis_based_repair/synthesis_based_repair:$PATH
   git clone https://github.com/tulip-control/dd.git
   cd dd
   pip install cython
@@ -41,14 +41,14 @@ This code requires python > 3 and has been tested on python 3.8.10 and Ubuntu 20
 - This [repo](https://github.com/MartinMeng008/cs4750) containing helper functions should be installed in ROS catkin_ws directory:
 
    ```shell
-  cd [parent_dir_of_catkin]/catkin_ws/src
+  cd [parent_dir_of_catkin_ws]/catkin_ws/src
   git clone https://github.com/MartinMeng008/cs4750.git
   ```
 
-- Hello Robot Stretch ROS [package](https://github.com/hello-robot/stretch_ros):
+- Our demonstration runs on a physical Hello Robot Stretch. Install their ROS [package](https://github.com/hello-robot/stretch_ros):
 
    ```shell
-  cd [parent_dir_of_catkin]/catkin_ws/src
+  cd [parent_dir_of_catkin_ws]/catkin_ws/src
   git clone https://github.com/hello-robot/stretch_ros.git
    ```
 
@@ -65,10 +65,10 @@ pip install argparse matplotlib networkx numpy shapley z3
 ```
 
 ### Installation
-Clone the repository to the catkin_ws directory:
+Clone the repository to the catkin_ws directory and build the workspace:
 
 ```shell
-cd [parent_dir_of_catkin]/catkin_ws/src
+cd [parent_dir_of_catkin_ws]/catkin_ws/src
 git clone https://github.com/MartinMeng008/env_relax_repair.git
 cd ..
 catkin build
