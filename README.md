@@ -63,7 +63,7 @@ Clone the repository to the catkin_ws directory and build the workspace:
 
 ```shell
 cd [parent_dir_of_catkin_ws]/catkin_ws/src
-git clone https://github.com/MartinMeng008/env_relax_repair.git
+git clone https://github.com/MartinMeng008/env_repair.git
 cd ..
 catkin build
 source devel/setup.bash
