@@ -173,7 +173,7 @@ To create a new example, first create a new input directory:
 mkdir [parent_dir_of_env_relax_repair]/env_relax_repair/scripts/inputs/[new_example]
 ```
 
-Then in the new directory `[new_example]`, create the following `JSON` files as described above:
+Then in the new directory `[new_example]`, create the following `JSON` files as described [above](https://github.com/MartinMeng008/env_relax_repair/blob/main/README.md#inputs):
 - `abstraction/locations.json`
 - `abstraction/objects.json`
 - `abstraction/skills.json`
@@ -181,6 +181,12 @@ Then in the new directory `[new_example]`, create the following `JSON` files as 
 - `spec.json`
 - `opts.json`
 - `files.json`
+
+To run the new example, from `[parent_dir_of_env_relax_repair]/env_relax_repair/scripts`, run:
+
+```shell
+python main.py -f inputs/[new_example]/files.json
+```
 
 ## Reference
 If you use this repository or find this project interesting, please kindly cite:
