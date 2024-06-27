@@ -7,6 +7,7 @@
     "do_names": true,
     "post_first": false,
     "mobile_repair": true,
+    "switch_repair": true,
     "post_repair_cnt": 0,
     "to_file": false,
     "fid_base": "none",
