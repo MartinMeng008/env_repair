@@ -20,7 +20,7 @@ from .tools import (json_load_wrapper,
                    find_controllable_manipulation_symbols,
                    assert_exit,)
 
-from env_relax_repair.src.stretch_controller.main_controller import MainController
+from env_repair.src.controller.main_controller import MainController
 
 DEBUG = False
 CREATE_SYMBOLS_ONLY = False

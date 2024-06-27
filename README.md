@@ -38,14 +38,8 @@ This code requires python > 3 and has been tested on python 3.8.10 and Ubuntu 20
   export PATH=[parent_dir_of_slugs]/slugs/tools/StructuredSlugsParser:$PATH
   ```
 - ROS. This code has been tested on ROS Noetic. Follow the installation [instructions](http://wiki.ros.org/ROS/Installation).
-- This [repo](https://github.com/MartinMeng008/cs4750) containing helper functions should be installed in ROS catkin_ws directory:
 
-   ```shell
-  cd [parent_dir_of_catkin_ws]/catkin_ws/src
-  git clone https://github.com/MartinMeng008/cs4750.git
-  ```
-
-- Our demonstration runs on a physical Hello Robot Stretch. Install their ROS [package](https://github.com/hello-robot/stretch_ros):
+- Our demonstration runs on a Hello Robot Stretch. Install their ROS [package](https://github.com/hello-robot/stretch_ros):
 
    ```shell
   cd [parent_dir_of_catkin_ws]/catkin_ws/src

@@ -20,7 +20,7 @@ from tools import (
     find_loc_from_true_manipulation_symbols_no_ee,
     find_changing_object)
 
-from env_relax_repair.src.stretch_controller.main_controller import MainController
+from env_repair.src.controller.main_controller import MainController
 
 DEBUG = False
 

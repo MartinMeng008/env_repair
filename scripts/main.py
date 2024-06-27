@@ -1,8 +1,8 @@
 #!/usr/bin/env python
-from env_relax_repair.scripts.skill_executable import SkillsExecutable
+from skill_executable import SkillsExecutable
 from grounding import Groundings
 from spec_writer import SpecWriter
-from env_relax_repair.scripts.monitor_compiler import Compiler
+from monitor_compiler import Compiler
 from repair import Repair
 
 import sys
@@ -34,7 +34,7 @@ from .tools import (
 
 create_build_monitor()
 
-from env_relax_repair.src.stretch_controller.main_controller import MainController
+from env_repair.src.controller.main_controller import MainController
 
 import build.generated_monitor
 from build.generated_monitor import Monitor

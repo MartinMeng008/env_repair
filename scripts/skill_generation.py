@@ -1,6 +1,5 @@
 #! /usr/bin/env python
 import os
-import sys
 import copy
 curr_dir = os.getcwd()
 from tools import (

@@ -8,6 +8,11 @@ import sys
 import subprocess
 import numpy as np
 import copy
+from tf_conversions import transformations
+from geometry_msgs.msg import (
+    Pose,
+    Quaternion,
+)
 
 from skills import Skill
 
@@ -830,6 +835,32 @@ def print_precondition(precondition: dict, indent: int = 0):
     indent_str = " " * indent
     for key, value in precondition.items():
         print(f"{indent_str}{key}: {value}")
+
+def quaternion_to_angle(q: Quaternion) -> float:
+    """Convert a C{geometry_msgs/Quaternion} into a yaw angle.
+
+    Args:
+      q: ROS message to be converted
+
+    Returns:
+      The equivalent yaw angle (radians)
+    """
+    _, _, yaw = transformations.euler_from_quaternion((q.x, q.y, q.z, q.w))
+    return yaw
+
+def pose_to_particle(msg: Pose) -> list:
+    """Convert a C{geometry_msgs/Pose} into a particle.
+
+    Args:
+      msg: ROS message to be converted.
+
+    Returns:
+      A particle [x, y, theta]
+    """
+    x = msg.position.x
+    y = msg.position.y
+    theta = quaternion_to_angle(msg.orientation)
+    return [x, y, theta]
 
 if __name__ == '__main__':
     filename = 'examples/approach2/build/tmp.slugsin'

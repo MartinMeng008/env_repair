@@ -3,17 +3,15 @@
 import rospy
 import tf2_ros, tf2_geometry_msgs
 import numpy as np
-from std_msgs.msg import (
-    String, 
-    Header,
-)
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import Twist
 from geometry_msgs.msg import (
     PoseStamped, 
     TransformStamped
 )
-from cs4750 import utils
+from env_relax_repair.scripts.tools import (
+    pose_to_particle
+)
 import time
 import threading
 
@@ -259,7 +257,7 @@ class BaseController:
         Returns:
             pose: np array [x, y, heading]
         """
-        return np.array(utils.pose_to_particle(odometry.pose.pose))
+        return np.array(pose_to_particle(odometry.pose.pose))
     
     def get_transform(self, source_frame: str, target_frame: str, stamp = rospy.Time(), duration = rospy.Duration(1.0)) -> TransformStamped:
         """
@@ -308,7 +306,7 @@ class BaseController:
             pose: np array [x, y, heading]
         """
         pose_stamped_transformed = self.transform_poststamped(pose_stamped, 'global')
-        return np.array(utils.pose_to_particle(pose_stamped_transformed.pose))
+        return np.array(pose_to_particle(pose_stamped_transformed.pose))
     
     def _get_error_theta(self, pose: np.ndarray, target: np.ndarray) -> float:
         return self._wrap_radians_angle(pose[2] - target[2])
@@ -326,12 +324,8 @@ class BaseController:
                       np.array2string(self.curr_pose))
             
     def callback_real(self, pose_stamped: PoseStamped):
-        # position, quaternion = utils.pose_stamped_to_pq(pose_stamped)
-        # self.curr_pose = np.array([position[0], position[2], utils.quaternion_to_angle(utils.np_to_quaternion(quaternion))])
-        # rospy.loginfo(rospy.get_caller_id() + " Pose: %s" % pose_stamped)
-        with self.pose_lock:
+         with self.pose_lock:
             self.curr_pose = self.get_car_pose_real(pose_stamped)
-        # self.curr_pose = np.array([pose.x, pose.y, pose.theta])
             if DEBUG:
                 rospy.loginfo(rospy.get_caller_id() + " Current pose: %s" %
                         np.array2string(self.curr_pose))
