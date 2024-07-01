@@ -116,7 +116,25 @@ Our framework creates atomic propositions by taking a Cartesian product of the l
 We also allow the user to provide a set of user inputs that are controlled by the user via the keyboard through a `JSON` file. In the demonstration, the user controls whether the cup is empty or full, as defined in [`user_inputs.json`](scripts/inputs/three_violations/abstraction/user_inputs.json).
 
 #### Skills
-The user should provide an abstraction of robot skills in a `JSON` file. In the demonstration, we define the skill abstraction in [`skills.json`](scripts/inputs/three_violations/abstraction/skills.json). 
+The user should provide an abstraction of robot skills in a `JSON` file, such as 
+
+```json
+{
+    "skill0": {
+        "name": "skill0", 
+        "primitive_skill": "movebase", 
+        "type": "mobile", 
+        "goal_type": "region", 
+        "initial_preconditions": [{"p_base_x0": true, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": false, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}], 
+        "intermediate_states": [[{"p_base_x0": true, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": false, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}, [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": true, "p_base_x3": false, "p_base_x4": false, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}]], [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": true, "p_base_x3": false, "p_base_x4": false, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}, [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": true, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}]]], 
+        "final_postconditions": [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": true, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}]
+    }
+}
+```
+
+where `initial_preconditions` is a list of input states indicating where the skill can initiate, `final_postconditions` is a list of input states indicating where the skill results, `intermediate_states` is a list of state-list pairs in which the state is the precondition of the intermediate transition and the list of states is the postconditions of the transition. Other fields, `primitive_skill`, `type`, and `goal_type`, indicate which low-level controller implements the skill.
+
+In the demonstration, we define the skill abstraction in [`skills.json`](scripts/inputs/three_violations/abstraction/skills.json). 
 
 We also provide a helper function [skill_generation.py](scripts/skill_generation.py) that takes in a state and a set of transitions, and generates the corresponding skill abstraction.
 
