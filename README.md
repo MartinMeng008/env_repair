@@ -138,7 +138,7 @@ In the demonstration, we define the skill abstraction in [`skills.json`](scripts
 
 We also provide a helper function [skill_generation.py](scripts/skill_generation.py) that takes in a state and a set of transitions, and generates the corresponding skill abstraction.
 
-We provide low-level [controllers](src/stretch_controller/main_controller.py) that implement the skills for our demonstration, but the user can use different low-level controllers, such as a learned policy.
+We provide low-level [controllers](src/controller/main_controller.py) that implement the skills for our demonstration, but the user can use different low-level controllers, such as a learned policy.
 
 #### Tasks 
 The user should describe the robot task in a `JSON` file. In the demonstration, we define the task in [`spec.json`](scripts/inputs/three_violations/spec.json) as shown below:
