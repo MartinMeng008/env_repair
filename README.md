@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository provides the code associated with the paper [Automated Robot Recovery from Assumption Violations of High-level Specifications]().
+This repository provides the code associated with the paper [Automated Robot Recovery from Assumption Violations of High-level Specifications](http://arxiv.org/abs/2407.00562).
 
 This project provides the first framework that enables robots to automatically recover from environment assumption violations of high-level specifications during task execution. We create a monitor to detect assumption violations during the task execution, relax the violated assumptions to admit observed environment behaviors, and obtain new robot skills for task completion. 
 
@@ -204,5 +204,11 @@ python main.py -f inputs/[new_example]/files.json
 If you use this repository or find this project interesting, please kindly cite:
 
 ```bib
-Todo
+@misc{meng2024automated,
+    title = {Automated Robot Recovery from Assumption Violations of High-Level Specifications},
+    author = {Meng, Qian and Kress-Gazit, Hadas},
+    year = {2024},
+    publisher = {arXiv},
+    keywords = {68T40, Computer Science - Robotics}
+}
 ```
