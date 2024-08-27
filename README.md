@@ -8,8 +8,7 @@ This project provides the first framework that enables robots to automatically r
 
 We demonstrate the framework in a factory-like setting: [video](https://youtu.be/OTUEyqQfQQs)
 
-<!-- ![overview](workflow.png) -->
-<img src=workflow.png alt="overview" width="600">
+This work is presented at CASE 2024: [video](https://youtu.be/O7PITKfLQ_k)
 
 
 ## Setup
