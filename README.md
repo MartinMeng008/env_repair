@@ -8,7 +8,7 @@ This project provides the first framework that enables robots to automatically r
 
 We demonstrate the framework in a factory-like setting: [video](https://youtu.be/OTUEyqQfQQs)
 
-This work is presented at CASE 2024: [video](https://youtu.be/O7PITKfLQ_k)
+This work is presented at [CASE 2024](https://2024.ieeecase.org/): [video](https://youtu.be/O7PITKfLQ_k)
 
 
 ## Setup
