@@ -112,7 +112,13 @@ In the demonstration, we define the objects in [`objects.json`](scripts/inputs/t
 #### Propositions
 Our framework creates atomic propositions by taking a Cartesian product of the locations and the objects. Each proposition `p_obj_loc` indicates that the object `obj` is in the region `loc`, e.g. `p_base_x0` indicates that the robot base is in the region `x0`. 
 
-We also allow the user to provide a set of user inputs that are controlled by the user via the keyboard through a `JSON` file. In the demonstration, the user controls whether the cup is empty or full, as defined in [`user_inputs.json`](scripts/inputs/three_violations/abstraction/user_inputs.json).
+We also allow the user to provide a set of user inputs that the user controls via the keyboard through a `JSON` file. In the demonstration, the user controls whether the cup is empty or full, as defined in [`user_inputs.json`](scripts/inputs/three_violations/abstraction/user_inputs.json).
+
+To generate the input propositions, from `[parent_dir_of_env_repair]/env_repair/scripts`, run:
+
+```shell
+python grounding.py -f inputs/three_violations/files.json
+```
 
 #### Skills
 The user should provide an abstraction of robot skills in a `JSON` file, such as 
@@ -163,7 +169,18 @@ The user should describe the robot task in a `JSON` file. In the demonstration, 
                  "p_plate_k3 -> p_plate_k3'"]
 }
 ```
-where `sys_init_true` states the robot skills that operate initially, `env_live` states the environment liveness assumptions, `sys_live` specifies the system goals that should be satisfied repeatedly, `user_sys` specifies user-defined safety constraints that the robot should obey, and `user_env` states the user-defined environment safety assumptions. 
+where 
+- `sys_init_true` states the robot skills that operate initially
+- `env_live` states the environment liveness assumptions
+- `sys_live` specifies the system goals that should be satisfied repeatedly
+- `user_sys` specifies user-defined safety constraints that the robot should obey
+- `user_env` states the user-defined environment safety assumptions
+
+To generate the specification, after [generating](https://github.com/MartinMeng008/env_repair/edit/main/README.md#propositions) input propositions, from `[parent_dir_of_env_repair]/env_repair/scripts`, run:
+
+```shell
+python spec_writer.py -f inputs/three_violations/files.json
+```  
 
 #### Options and Files
 The user should provide options for [synthesis_based_repair](https://github.com/apacheck/synthesis_based_repair) in a `JSON` file, such as [`opts.json`](scripts/inputs/three_violations/opts.json) in our demonstration.
@@ -171,7 +188,7 @@ The user should provide options for [synthesis_based_repair](https://github.com/
 The user should also provide a `JSON` file consisting of all the informations of the input files, such as [`files.json`](scripts/inputs/three_violations/files.json) in our demonstration. 
 
 ### Demonstration
-To run our demonstration, from `[parent_dir_of_env_relax_repair]/env_relax_repair/scripts`, run:
+To run our demonstration, from `[parent_dir_of_env_repair]/env_repair/scripts`, run:
 
 ```shell
 python main.py -f inputs/three_violations/files.json
@@ -181,10 +198,10 @@ python main.py -f inputs/three_violations/files.json
 To create a new example, first create a new input directory:
 
 ```shell
-mkdir [parent_dir_of_env_relax_repair]/env_relax_repair/scripts/inputs/[new_example]
+mkdir [parent_dir_of_env_repair]/env_repair/scripts/inputs/[new_example]
 ```
 
-Then in the new directory `[new_example]`, create the following `JSON` files as described [above](https://github.com/MartinMeng008/env_relax_repair/blob/main/README.md#inputs):
+Then in the new directory `[new_example]`, create the following `JSON` files as described [above](https://github.com/MartinMeng008/env_repair/blob/main/README.md#inputs):
 - `abstraction/locations.json`
 - `abstraction/objects.json`
 - `abstraction/skills.json`
@@ -193,7 +210,7 @@ Then in the new directory `[new_example]`, create the following `JSON` files as 
 - `opts.json`
 - `files.json`
 
-To run the new example, from `[parent_dir_of_env_relax_repair]/env_relax_repair/scripts`, run:
+To run the new example, from `[parent_dir_of_env_repair]/env_repair/scripts`, run:
 
 ```shell
 python main.py -f inputs/[new_example]/files.json
