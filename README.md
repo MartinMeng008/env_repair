@@ -176,7 +176,7 @@ where
 - `user_sys` specifies user-defined safety constraints that the robot should obey
 - `user_env` states the user-defined environment safety assumptions
 
-To generate the specification, after [generating](https://github.com/MartinMeng008/env_repair/edit/main/README.md#propositions) input propositions, from `[parent_dir_of_env_repair]/env_repair/scripts`, run:
+To generate the specification, after [generating](https://github.com/MartinMeng008/env_repair/main/README.md#propositions) input propositions, from `[parent_dir_of_env_repair]/env_repair/scripts`, run:
 
 ```shell
 python spec_writer.py -f inputs/three_violations/files.json
