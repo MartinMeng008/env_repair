@@ -51,10 +51,10 @@ This code requires python > 3 and has been tested on python 3.8.10 and Ubuntu 20
 - networkx
 - numpy
 - shapley
-- z3
+- z3-solver
 
 ```shell
-pip install argparse matplotlib networkx numpy shapley z3
+pip install argparse matplotlib networkx numpy shapley z3-solver
 ```
 
 ### Installation
