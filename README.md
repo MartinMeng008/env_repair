@@ -2,14 +2,13 @@
 
 ## Overview
 
-This repository provides the code associated with the paper [Automated Robot Recovery from Assumption Violations of High-level Specifications]().
+This repository provides the code associated with the paper [Automated Robot Recovery from Assumption Violations of High-level Specifications](http://arxiv.org/abs/2407.00562).
 
 This project provides the first framework that enables robots to automatically recover from environment assumption violations of high-level specifications during task execution. We create a monitor to detect assumption violations during the task execution, relax the violated assumptions to admit observed environment behaviors, and obtain new robot skills for task completion. 
 
 We demonstrate the framework in a factory-like setting: [video](https://youtu.be/OTUEyqQfQQs)
 
-<!-- ![overview](workflow.png) -->
-<img src=workflow.png alt="overview" width="600">
+This work is presented at [CASE 2024](https://2024.ieeecase.org/): [video](https://youtu.be/O7PITKfLQ_k)
 
 
 ## Setup
@@ -52,10 +51,10 @@ This code requires python > 3 and has been tested on python 3.8.10 and Ubuntu 20
 - networkx
 - numpy
 - shapley
-- z3
+- z3-solver
 
 ```shell
-pip install argparse matplotlib networkx numpy shapley z3
+pip install argparse matplotlib networkx numpy shapley z3-solver
 ```
 
 ### Installation
@@ -63,7 +62,7 @@ Clone the repository to the catkin_ws directory and build the workspace:
 
 ```shell
 cd [parent_dir_of_catkin_ws]/catkin_ws/src
-git clone https://github.com/MartinMeng008/env_relax_repair.git
+git clone https://github.com/MartinMeng008/env_repair.git
 cd ..
 catkin build
 source devel/setup.bash
@@ -113,14 +112,38 @@ In the demonstration, we define the objects in [`objects.json`](scripts/inputs/t
 #### Propositions
 Our framework creates atomic propositions by taking a Cartesian product of the locations and the objects. Each proposition `p_obj_loc` indicates that the object `obj` is in the region `loc`, e.g. `p_base_x0` indicates that the robot base is in the region `x0`. 
 
-We also allow the user to provide a set of user inputs that are controlled by the user via the keyboard through a `JSON` file. In the demonstration, the user controls whether the cup is empty or full, as defined in [`user_inputs.json`](scripts/inputs/three_violations/abstraction/user_inputs.json).
+We also allow the user to provide a set of user inputs that the user controls via the keyboard through a `JSON` file. In the demonstration, the user controls whether the cup is empty or full, as defined in [`user_inputs.json`](scripts/inputs/three_violations/abstraction/user_inputs.json).
+
+To generate the input propositions, from `[parent_dir_of_env_repair]/env_repair/scripts`, run:
+
+```shell
+python grounding.py -f inputs/three_violations/files.json
+```
 
 #### Skills
-The user should provide an abstraction of robot skills in a `JSON` file. In the demonstration, we define the skill abstraction in [`skills.json`](scripts/inputs/three_violations/abstraction/skills.json). 
+The user should provide an abstraction of robot skills in a `JSON` file, such as 
+
+```json
+{
+    "skill0": {
+        "name": "skill0", 
+        "primitive_skill": "movebase", 
+        "type": "mobile", 
+        "goal_type": "region", 
+        "initial_preconditions": [{"p_base_x0": true, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": false, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}], 
+        "intermediate_states": [[{"p_base_x0": true, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": false, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}, [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": true, "p_base_x3": false, "p_base_x4": false, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}]], [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": true, "p_base_x3": false, "p_base_x4": false, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}, [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": true, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}]]], 
+        "final_postconditions": [{"p_base_x0": false, "p_base_x1": false, "p_base_x2": false, "p_base_x3": false, "p_base_x4": true, "p_cup_k0": false, "p_cup_k1": false, "p_cup_k2": false, "p_cup_k3": false, "p_cup_t": false, "p_cup_ee": true}]
+    }
+}
+```
+
+where `initial_preconditions` is a list of input states indicating where the skill can initiate, `final_postconditions` is a list of input states indicating where the skill results, `intermediate_states` is a list of state-list pairs in which the state is the precondition of the intermediate transition and the list of states is the postconditions of the transition. Other fields, `primitive_skill`, `type`, and `goal_type`, indicate which low-level controller implements the skill.
+
+In the demonstration, we define the skill abstraction in [`skills.json`](scripts/inputs/three_violations/abstraction/skills.json). 
 
 We also provide a helper function [skill_generation.py](scripts/skill_generation.py) that takes in a state and a set of transitions, and generates the corresponding skill abstraction.
 
-We provide low-level [controllers](src/stretch_controller/main_controller.py) that implement the skills for our demonstration, but the user can use different low-level controllers, such as a learned policy.
+We provide low-level [controllers](src/controller/main_controller.py) that implement the skills for our demonstration, but the user can use different low-level controllers, such as a learned policy.
 
 #### Tasks 
 The user should describe the robot task in a `JSON` file. In the demonstration, we define the task in [`spec.json`](scripts/inputs/three_violations/spec.json) as shown below:
@@ -146,7 +169,18 @@ The user should describe the robot task in a `JSON` file. In the demonstration, 
                  "p_plate_k3 -> p_plate_k3'"]
 }
 ```
-where `sys_init_true` states the robot skills that operate initially, `env_live` states the environment liveness assumptions, `sys_live` specifies the system goals that should be satisfied repeatedly, `user_sys` specifies user-defined safety constraints that the robot should obey, and `user_env` states the user-defined environment safety assumptions. 
+where 
+- `sys_init_true` states the robot skills that operate initially
+- `env_live` states the environment liveness assumptions
+- `sys_live` specifies the system goals that should be satisfied repeatedly
+- `user_sys` specifies user-defined safety constraints that the robot should obey
+- `user_env` states the user-defined environment safety assumptions
+
+To generate the specification, after [generating input propositions](https://github.com/MartinMeng008/env_repair/main/README.md#propositions), from `[parent_dir_of_env_repair]/env_repair/scripts`, run:
+
+```shell
+python spec_writer.py -f inputs/three_violations/files.json
+```  
 
 #### Options and Files
 The user should provide options for [synthesis_based_repair](https://github.com/apacheck/synthesis_based_repair) in a `JSON` file, such as [`opts.json`](scripts/inputs/three_violations/opts.json) in our demonstration.
@@ -154,7 +188,7 @@ The user should provide options for [synthesis_based_repair](https://github.com/
 The user should also provide a `JSON` file consisting of all the informations of the input files, such as [`files.json`](scripts/inputs/three_violations/files.json) in our demonstration. 
 
 ### Demonstration
-To run our demonstration, from `[parent_dir_of_env_relax_repair]/env_relax_repair/scripts`, run:
+To run our demonstration, from `[parent_dir_of_env_repair]/env_repair/scripts`, run:
 
 ```shell
 python main.py -f inputs/three_violations/files.json
@@ -164,10 +198,10 @@ python main.py -f inputs/three_violations/files.json
 To create a new example, first create a new input directory:
 
 ```shell
-mkdir [parent_dir_of_env_relax_repair]/env_relax_repair/scripts/inputs/[new_example]
+mkdir [parent_dir_of_env_repair]/env_repair/scripts/inputs/[new_example]
 ```
 
-Then in the new directory `[new_example]`, create the following `JSON` files as described [above](https://github.com/MartinMeng008/env_relax_repair/blob/main/README.md#inputs):
+Then in the new directory `[new_example]`, create the following `JSON` files as described [above](https://github.com/MartinMeng008/env_repair/blob/main/README.md#inputs):
 - `abstraction/locations.json`
 - `abstraction/objects.json`
 - `abstraction/skills.json`
@@ -176,7 +210,7 @@ Then in the new directory `[new_example]`, create the following `JSON` files as 
 - `opts.json`
 - `files.json`
 
-To run the new example, from `[parent_dir_of_env_relax_repair]/env_relax_repair/scripts`, run:
+To run the new example, from `[parent_dir_of_env_repair]/env_repair/scripts`, run:
 
 ```shell
 python main.py -f inputs/[new_example]/files.json
@@ -186,5 +220,10 @@ python main.py -f inputs/[new_example]/files.json
 If you use this repository or find this project interesting, please kindly cite:
 
 ```bib
-Todo
+@article{meng2024automated,
+  title={Automated Robot Recovery from Assumption Violations of High-Level Specifications},
+  author={Meng, Qian and Kress-Gazit, Hadas},
+  journal={arXiv preprint arXiv:2407.00562},
+  year={2024}
+}
 ```
