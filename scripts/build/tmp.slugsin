@@ -1,0 +1,329 @@
+[INPUT]
+p_cup_t
+p_cup_k0
+p_cup_k1
+p_cup_k2
+p_cup_k3
+p_cup_ee
+p_base_x0
+p_base_x1
+p_base_x2
+p_base_x3
+p_base_x4
+p_cone_x0
+p_cone_x1
+p_cone_x2
+p_cone_x3
+p_cone_x4
+p_block_t
+p_block_k0
+p_block_k1
+p_block_k2
+p_block_k3
+p_block_ee
+p_plate_t
+p_plate_k0
+p_plate_k1
+p_plate_k2
+p_plate_k3
+p_plate_ee
+empty
+
+[OUTPUT]
+skill0
+skill1
+skill2
+skill3
+skill4
+skill5
+skill6
+skill7
+
+[ENV_TRANS]
+| ! & & & & & & & & & & & skill0 p_base_x0 ! p_base_x1 ! p_base_x2 ! p_base_x3 ! p_base_x4 ! p_cup_k0 ! p_cup_k1 ! p_cup_k2 ! p_cup_k3 ! p_cup_t p_cup_ee & & & & & & & & & & ! p_base_x0' ! p_base_x1' p_base_x2' ! p_base_x3' ! p_base_x4' ! p_cup_k0' ! p_cup_k1' ! p_cup_k2' ! p_cup_k3' ! p_cup_t' p_cup_ee'
+| ! & & & & & & & & & & & skill0 ! p_base_x0 ! p_base_x1 p_base_x2 ! p_base_x3 ! p_base_x4 ! p_cup_k0 ! p_cup_k1 ! p_cup_k2 ! p_cup_k3 ! p_cup_t p_cup_ee & & & & & & & & & & ! p_base_x0' ! p_base_x1' ! p_base_x2' ! p_base_x3' p_base_x4' ! p_cup_k0' ! p_cup_k1' ! p_cup_k2' ! p_cup_k3' ! p_cup_t' p_cup_ee'
+| ! & & & & & & & & & & & skill1 ! p_base_x0 ! p_base_x1 ! p_base_x2 ! p_base_x3 p_base_x4 ! p_cup_k0 ! p_cup_k1 ! p_cup_k2 ! p_cup_k3 ! p_cup_t p_cup_ee & & & & & & & & & & ! p_base_x0' ! p_base_x1' p_base_x2' ! p_base_x3' ! p_base_x4' ! p_cup_k0' ! p_cup_k1' ! p_cup_k2' ! p_cup_k3' ! p_cup_t' p_cup_ee'
+| ! & & & & & & & & & & & skill1 ! p_base_x0 ! p_base_x1 p_base_x2 ! p_base_x3 ! p_base_x4 ! p_cup_k0 ! p_cup_k1 ! p_cup_k2 ! p_cup_k3 ! p_cup_t p_cup_ee & & & & & & & & & & p_base_x0' ! p_base_x1' ! p_base_x2' ! p_base_x3' ! p_base_x4' ! p_cup_k0' ! p_cup_k1' ! p_cup_k2' ! p_cup_k3' ! p_cup_t' p_cup_ee'
+| ! & & & & & & & & & & & skill2 ! p_base_x0 ! p_base_x1 ! p_base_x2 ! p_base_x3 p_base_x4 ! p_cup_k0 ! p_cup_k1 p_cup_k2 ! p_cup_k3 ! p_cup_t ! p_cup_ee & & & & & & & & & & ! p_base_x0' ! p_base_x1' ! p_base_x2' ! p_base_x3' p_base_x4' ! p_cup_k0' ! p_cup_k1' ! p_cup_k2' ! p_cup_k3' ! p_cup_t' p_cup_ee'
+| ! & & & & & & & & & & & skill3 p_base_x0 ! p_base_x1 ! p_base_x2 ! p_base_x3 ! p_base_x4 ! p_cup_k0 ! p_cup_k1 ! p_cup_k2 ! p_cup_k3 p_cup_t ! p_cup_ee & & & & & & & & & & p_base_x0' ! p_base_x1' ! p_base_x2' ! p_base_x3' ! p_base_x4' ! p_cup_k0' ! p_cup_k1' ! p_cup_k2' ! p_cup_k3' ! p_cup_t' p_cup_ee'
+| ! & & & & & & & & & & & skill4 ! p_base_x0 ! p_base_x1 ! p_base_x2 ! p_base_x3 p_base_x4 ! p_block_k0 p_block_k1 ! p_block_k2 ! p_block_k3 ! p_block_t ! p_block_ee & & & & & & & & & & ! p_base_x0' ! p_base_x1' ! p_base_x2' ! p_base_x3' p_base_x4' ! p_block_k0' ! p_block_k1' ! p_block_k2' ! p_block_k3' ! p_block_t' p_block_ee'
+| ! & & & & & & & & & & & skill5 ! p_base_x0 ! p_base_x1 ! p_base_x2 ! p_base_x3 p_base_x4 ! p_cup_k0 ! p_cup_k1 ! p_cup_k2 ! p_cup_k3 ! p_cup_t p_cup_ee & & & & & & & & & & ! p_base_x0' ! p_base_x1' ! p_base_x2' ! p_base_x3' p_base_x4' ! p_cup_k0' ! p_cup_k1' p_cup_k2' ! p_cup_k3' ! p_cup_t' ! p_cup_ee'
+| ! & & & & & & & & & & & skill6 p_base_x0 ! p_base_x1 ! p_base_x2 ! p_base_x3 ! p_base_x4 ! p_cup_k0 ! p_cup_k1 ! p_cup_k2 ! p_cup_k3 ! p_cup_t p_cup_ee & & & & & & & & & & p_base_x0' ! p_base_x1' ! p_base_x2' ! p_base_x3' ! p_base_x4' ! p_cup_k0' ! p_cup_k1' ! p_cup_k2' ! p_cup_k3' p_cup_t' ! p_cup_ee'
+| ! & & & & & & & & & & & skill7 ! p_base_x0 ! p_base_x1 ! p_base_x2 ! p_base_x3 p_base_x4 ! p_block_k0 ! p_block_k1 ! p_block_k2 ! p_block_k3 ! p_block_t p_block_ee & & & & & & & & & & ! p_base_x0' ! p_base_x1' ! p_base_x2' ! p_base_x3' p_base_x4' ! p_block_k0' ! p_block_k1' ! p_block_k2' p_block_k3' ! p_block_t' ! p_block_ee'
+| ! & empty ! empty' p_cup_k2
+| ! & ! empty empty' p_cup_t
+| ! p_cone_x0 p_cone_x0'
+| ! p_cone_x1 p_cone_x1'
+| ! p_cone_x2 p_cone_x2'
+| ! p_cone_x3 p_cone_x3'
+| ! p_cone_x4 p_cone_x4'
+| ! p_plate_k0 p_plate_k0'
+| ! p_plate_k1 p_plate_k1'
+| ! p_plate_k2 p_plate_k2'
+| ! p_plate_k3 p_plate_k3'
+! & p_cup_t p_cup_k0
+! & p_cup_t' p_cup_k0'
+! & p_cup_t p_cup_k1
+! & p_cup_t' p_cup_k1'
+! & p_cup_t p_cup_k2
+! & p_cup_t' p_cup_k2'
+! & p_cup_t p_cup_k3
+! & p_cup_t' p_cup_k3'
+! & p_cup_t p_cup_ee
+! & p_cup_t' p_cup_ee'
+! & p_cup_k0 p_cup_k1
+! & p_cup_k0' p_cup_k1'
+! & p_cup_k0 p_cup_k2
+! & p_cup_k0' p_cup_k2'
+! & p_cup_k0 p_cup_k3
+! & p_cup_k0' p_cup_k3'
+! & p_cup_k0 p_cup_ee
+! & p_cup_k0' p_cup_ee'
+! & p_cup_k1 p_cup_k2
+! & p_cup_k1' p_cup_k2'
+! & p_cup_k1 p_cup_k3
+! & p_cup_k1' p_cup_k3'
+! & p_cup_k1 p_cup_ee
+! & p_cup_k1' p_cup_ee'
+! & p_cup_k2 p_cup_k3
+! & p_cup_k2' p_cup_k3'
+! & p_cup_k2 p_cup_ee
+! & p_cup_k2' p_cup_ee'
+! & p_cup_k3 p_cup_ee
+! & p_cup_k3' p_cup_ee'
+| | | | | p_cup_t p_cup_k0 p_cup_k1 p_cup_k2 p_cup_k3 p_cup_ee
+| | | | | p_cup_t' p_cup_k0' p_cup_k1' p_cup_k2' p_cup_k3' p_cup_ee'
+! & p_base_x0 p_base_x1
+! & p_base_x0' p_base_x1'
+! & p_base_x0 p_base_x2
+! & p_base_x0' p_base_x2'
+! & p_base_x0 p_base_x3
+! & p_base_x0' p_base_x3'
+! & p_base_x0 p_base_x4
+! & p_base_x0' p_base_x4'
+! & p_base_x1 p_base_x2
+! & p_base_x1' p_base_x2'
+! & p_base_x1 p_base_x3
+! & p_base_x1' p_base_x3'
+! & p_base_x1 p_base_x4
+! & p_base_x1' p_base_x4'
+! & p_base_x2 p_base_x3
+! & p_base_x2' p_base_x3'
+! & p_base_x2 p_base_x4
+! & p_base_x2' p_base_x4'
+! & p_base_x3 p_base_x4
+! & p_base_x3' p_base_x4'
+| | | | p_base_x0 p_base_x1 p_base_x2 p_base_x3 p_base_x4
+| | | | p_base_x0' p_base_x1' p_base_x2' p_base_x3' p_base_x4'
+! & p_cone_x0 p_cone_x1
+! & p_cone_x0' p_cone_x1'
+! & p_cone_x0 p_cone_x2
+! & p_cone_x0' p_cone_x2'
+! & p_cone_x0 p_cone_x3
+! & p_cone_x0' p_cone_x3'
+! & p_cone_x0 p_cone_x4
+! & p_cone_x0' p_cone_x4'
+! & p_cone_x1 p_cone_x2
+! & p_cone_x1' p_cone_x2'
+! & p_cone_x1 p_cone_x3
+! & p_cone_x1' p_cone_x3'
+! & p_cone_x1 p_cone_x4
+! & p_cone_x1' p_cone_x4'
+! & p_cone_x2 p_cone_x3
+! & p_cone_x2' p_cone_x3'
+! & p_cone_x2 p_cone_x4
+! & p_cone_x2' p_cone_x4'
+! & p_cone_x3 p_cone_x4
+! & p_cone_x3' p_cone_x4'
+| | | | p_cone_x0 p_cone_x1 p_cone_x2 p_cone_x3 p_cone_x4
+| | | | p_cone_x0' p_cone_x1' p_cone_x2' p_cone_x3' p_cone_x4'
+! & p_block_t p_block_k0
+! & p_block_t' p_block_k0'
+! & p_block_t p_block_k1
+! & p_block_t' p_block_k1'
+! & p_block_t p_block_k2
+! & p_block_t' p_block_k2'
+! & p_block_t p_block_k3
+! & p_block_t' p_block_k3'
+! & p_block_t p_block_ee
+! & p_block_t' p_block_ee'
+! & p_block_k0 p_block_k1
+! & p_block_k0' p_block_k1'
+! & p_block_k0 p_block_k2
+! & p_block_k0' p_block_k2'
+! & p_block_k0 p_block_k3
+! & p_block_k0' p_block_k3'
+! & p_block_k0 p_block_ee
+! & p_block_k0' p_block_ee'
+! & p_block_k1 p_block_k2
+! & p_block_k1' p_block_k2'
+! & p_block_k1 p_block_k3
+! & p_block_k1' p_block_k3'
+! & p_block_k1 p_block_ee
+! & p_block_k1' p_block_ee'
+! & p_block_k2 p_block_k3
+! & p_block_k2' p_block_k3'
+! & p_block_k2 p_block_ee
+! & p_block_k2' p_block_ee'
+! & p_block_k3 p_block_ee
+! & p_block_k3' p_block_ee'
+| | | | | p_block_t p_block_k0 p_block_k1 p_block_k2 p_block_k3 p_block_ee
+| | | | | p_block_t' p_block_k0' p_block_k1' p_block_k2' p_block_k3' p_block_ee'
+! & p_plate_t p_plate_k0
+! & p_plate_t' p_plate_k0'
+! & p_plate_t p_plate_k1
+! & p_plate_t' p_plate_k1'
+! & p_plate_t p_plate_k2
+! & p_plate_t' p_plate_k2'
+! & p_plate_t p_plate_k3
+! & p_plate_t' p_plate_k3'
+! & p_plate_t p_plate_ee
+! & p_plate_t' p_plate_ee'
+! & p_plate_k0 p_plate_k1
+! & p_plate_k0' p_plate_k1'
+! & p_plate_k0 p_plate_k2
+! & p_plate_k0' p_plate_k2'
+! & p_plate_k0 p_plate_k3
+! & p_plate_k0' p_plate_k3'
+! & p_plate_k0 p_plate_ee
+! & p_plate_k0' p_plate_ee'
+! & p_plate_k1 p_plate_k2
+! & p_plate_k1' p_plate_k2'
+! & p_plate_k1 p_plate_k3
+! & p_plate_k1' p_plate_k3'
+! & p_plate_k1 p_plate_ee
+! & p_plate_k1' p_plate_ee'
+! & p_plate_k2 p_plate_k3
+! & p_plate_k2' p_plate_k3'
+! & p_plate_k2 p_plate_ee
+! & p_plate_k2' p_plate_ee'
+! & p_plate_k3 p_plate_ee
+! & p_plate_k3' p_plate_ee'
+| | | | | p_plate_t p_plate_k0 p_plate_k1 p_plate_k2 p_plate_k3 p_plate_ee
+| | | | | p_plate_t' p_plate_k0' p_plate_k1' p_plate_k2' p_plate_k3' p_plate_ee'
+! & p_cup_ee p_block_ee
+! & p_cup_ee' p_block_ee'
+! & p_cup_ee p_plate_ee
+! & p_cup_ee' p_plate_ee'
+! & p_block_ee p_plate_ee
+! & p_block_ee' p_plate_ee'
+| ! | | | | | & ! p_base_x0 ! ! p_base_x0' & p_base_x0 ! p_base_x0' | & ! p_base_x1 ! ! p_base_x1' & p_base_x1 ! p_base_x1' | & ! p_base_x2 ! ! p_base_x2' & p_base_x2 ! p_base_x2' | & ! p_base_x3 ! ! p_base_x3' & p_base_x3 ! p_base_x3' | & ! p_base_x4 ! ! p_base_x4' & p_base_x4 ! p_base_x4' & & & & & & & & & & & | & ! p_cup_t ! p_cup_t' & p_cup_t p_cup_t' | & ! p_cup_k0 ! p_cup_k0' & p_cup_k0 p_cup_k0' | & ! p_cup_k1 ! p_cup_k1' & p_cup_k1 p_cup_k1' | & ! p_cup_k2 ! p_cup_k2' & p_cup_k2 p_cup_k2' | & ! p_cup_k3 ! p_cup_k3' & p_cup_k3 p_cup_k3' | & ! p_cup_ee ! p_cup_ee' & p_cup_ee p_cup_ee' | & ! p_block_t ! p_block_t' & p_block_t p_block_t' | & ! p_block_k0 ! p_block_k0' & p_block_k0 p_block_k0' | & ! p_block_k1 ! p_block_k1' & p_block_k1 p_block_k1' | & ! p_block_k2 ! p_block_k2' & p_block_k2 p_block_k2' | & ! p_block_k3 ! p_block_k3' & p_block_k3 p_block_k3' | & ! p_block_ee ! p_block_ee' & p_block_ee p_block_ee'
+| ! | | | | | | | | | | | | & ! p_cup_t ! ! p_cup_t' & p_cup_t ! p_cup_t' | & ! p_cup_k0 ! ! p_cup_k0' & p_cup_k0 ! p_cup_k0' | & ! p_cup_k1 ! ! p_cup_k1' & p_cup_k1 ! p_cup_k1' | & ! p_cup_k2 ! ! p_cup_k2' & p_cup_k2 ! p_cup_k2' | & ! p_cup_k3 ! ! p_cup_k3' & p_cup_k3 ! p_cup_k3' | & ! p_cup_ee ! ! p_cup_ee' & p_cup_ee ! p_cup_ee' | & ! p_block_t ! ! p_block_t' & p_block_t ! p_block_t' | & ! p_block_k0 ! ! p_block_k0' & p_block_k0 ! p_block_k0' | & ! p_block_k1 ! ! p_block_k1' & p_block_k1 ! p_block_k1' | & ! p_block_k2 ! ! p_block_k2' & p_block_k2 ! p_block_k2' | & ! p_block_k3 ! ! p_block_k3' & p_block_k3 ! p_block_k3' | & ! p_block_ee ! ! p_block_ee' & p_block_ee ! p_block_ee' & & & & | & ! p_base_x0 ! p_base_x0' & p_base_x0 p_base_x0' | & ! p_base_x1 ! p_base_x1' & p_base_x1 p_base_x1' | & ! p_base_x2 ! p_base_x2' & p_base_x2 p_base_x2' | & ! p_base_x3 ! p_base_x3' & p_base_x3 p_base_x3' | & ! p_base_x4 ! p_base_x4' & p_base_x4 p_base_x4'
+| ! | | | | | | & ! p_cup_t ! ! p_cup_t' & p_cup_t ! p_cup_t' | & ! p_cup_k0 ! ! p_cup_k0' & p_cup_k0 ! p_cup_k0' | & ! p_cup_k1 ! ! p_cup_k1' & p_cup_k1 ! p_cup_k1' | & ! p_cup_k2 ! ! p_cup_k2' & p_cup_k2 ! p_cup_k2' | & ! p_cup_k3 ! ! p_cup_k3' & p_cup_k3 ! p_cup_k3' | & ! p_cup_ee ! ! p_cup_ee' & p_cup_ee ! p_cup_ee' & & & & & & & & & & | & ! p_base_x0 ! p_base_x0' & p_base_x0 p_base_x0' | & ! p_base_x1 ! p_base_x1' & p_base_x1 p_base_x1' | & ! p_base_x2 ! p_base_x2' & p_base_x2 p_base_x2' | & ! p_base_x3 ! p_base_x3' & p_base_x3 p_base_x3' | & ! p_base_x4 ! p_base_x4' & p_base_x4 p_base_x4' | & ! p_block_t ! p_block_t' & p_block_t p_block_t' | & ! p_block_k0 ! p_block_k0' & p_block_k0 p_block_k0' | & ! p_block_k1 ! p_block_k1' & p_block_k1 p_block_k1' | & ! p_block_k2 ! p_block_k2' & p_block_k2 p_block_k2' | & ! p_block_k3 ! p_block_k3' & p_block_k3 p_block_k3' | & ! p_block_ee ! p_block_ee' & p_block_ee p_block_ee'
+| ! | | | | | | & ! p_block_t ! ! p_block_t' & p_block_t ! p_block_t' | & ! p_block_k0 ! ! p_block_k0' & p_block_k0 ! p_block_k0' | & ! p_block_k1 ! ! p_block_k1' & p_block_k1 ! p_block_k1' | & ! p_block_k2 ! ! p_block_k2' & p_block_k2 ! p_block_k2' | & ! p_block_k3 ! ! p_block_k3' & p_block_k3 ! p_block_k3' | & ! p_block_ee ! ! p_block_ee' & p_block_ee ! p_block_ee' & & & & & & & & & & | & ! p_cup_t ! p_cup_t' & p_cup_t p_cup_t' | & ! p_cup_k0 ! p_cup_k0' & p_cup_k0 p_cup_k0' | & ! p_cup_k1 ! p_cup_k1' & p_cup_k1 p_cup_k1' | & ! p_cup_k2 ! p_cup_k2' & p_cup_k2 p_cup_k2' | & ! p_cup_k3 ! p_cup_k3' & p_cup_k3 p_cup_k3' | & ! p_cup_ee ! p_cup_ee' & p_cup_ee p_cup_ee' | & ! p_base_x0 ! p_base_x0' & p_base_x0 p_base_x0' | & ! p_base_x1 ! p_base_x1' & p_base_x1 p_base_x1' | & ! p_base_x2 ! p_base_x2' & p_base_x2 p_base_x2' | & ! p_base_x3 ! p_base_x3' & p_base_x3 p_base_x3' | & ! p_base_x4 ! p_base_x4' & p_base_x4 p_base_x4'
+| ! p_cup_ee & & & & & | & ! p_block_t ! p_block_t' & p_block_t p_block_t' | & ! p_block_k0 ! p_block_k0' & p_block_k0 p_block_k0' | & ! p_block_k1 ! p_block_k1' & p_block_k1 p_block_k1' | & ! p_block_k2 ! p_block_k2' & p_block_k2 p_block_k2' | & ! p_block_k3 ! p_block_k3' & p_block_k3 p_block_k3' | & ! p_block_ee ! p_block_ee' & p_block_ee p_block_ee'
+| ! p_block_ee & & & & & | & ! p_cup_t ! p_cup_t' & p_cup_t p_cup_t' | & ! p_cup_k0 ! p_cup_k0' & p_cup_k0 p_cup_k0' | & ! p_cup_k1 ! p_cup_k1' & p_cup_k1 p_cup_k1' | & ! p_cup_k2 ! p_cup_k2' & p_cup_k2 p_cup_k2' | & ! p_cup_k3 ! p_cup_k3' & p_cup_k3 p_cup_k3' | & ! p_cup_ee ! p_cup_ee' & p_cup_ee p_cup_ee'
+| ! & ! skill0 ! skill1 & & & & | & ! p_base_x0 ! p_base_x0' & p_base_x0 p_base_x0' | & ! p_base_x1 ! p_base_x1' & p_base_x1 p_base_x1' | & ! p_base_x2 ! p_base_x2' & p_base_x2 p_base_x2' | & ! p_base_x3 ! p_base_x3' & p_base_x3 p_base_x3' | & ! p_base_x4 ! p_base_x4' & p_base_x4 p_base_x4'
+| ! & & & & & ! skill2 ! skill3 ! skill4 ! skill5 ! skill6 ! skill7 & & & & & & & & & & & | & ! p_cup_t ! p_cup_t' & p_cup_t p_cup_t' | & ! p_cup_k0 ! p_cup_k0' & p_cup_k0 p_cup_k0' | & ! p_cup_k1 ! p_cup_k1' & p_cup_k1 p_cup_k1' | & ! p_cup_k2 ! p_cup_k2' & p_cup_k2 p_cup_k2' | & ! p_cup_k3 ! p_cup_k3' & p_cup_k3 p_cup_k3' | & ! p_cup_ee ! p_cup_ee' & p_cup_ee p_cup_ee' | & ! p_block_t ! p_block_t' & p_block_t p_block_t' | & ! p_block_k0 ! p_block_k0' & p_block_k0 p_block_k0' | & ! p_block_k1 ! p_block_k1' & p_block_k1 p_block_k1' | & ! p_block_k2 ! p_block_k2' & p_block_k2 p_block_k2' | & ! p_block_k3 ! p_block_k3' & p_block_k3 p_block_k3' | & ! p_block_ee ! p_block_ee' & p_block_ee p_block_ee'
+| ! & & & & & & & ! skill0 ! skill1 ! skill2 ! skill3 ! skill4 ! skill5 ! skill6 ! skill7 & & & & & & & & & & & & & & & & | & ! p_cup_t ! p_cup_t' & p_cup_t p_cup_t' | & ! p_cup_k0 ! p_cup_k0' & p_cup_k0 p_cup_k0' | & ! p_cup_k1 ! p_cup_k1' & p_cup_k1 p_cup_k1' | & ! p_cup_k2 ! p_cup_k2' & p_cup_k2 p_cup_k2' | & ! p_cup_k3 ! p_cup_k3' & p_cup_k3 p_cup_k3' | & ! p_cup_ee ! p_cup_ee' & p_cup_ee p_cup_ee' | & ! p_base_x0 ! p_base_x0' & p_base_x0 p_base_x0' | & ! p_base_x1 ! p_base_x1' & p_base_x1 p_base_x1' | & ! p_base_x2 ! p_base_x2' & p_base_x2 p_base_x2' | & ! p_base_x3 ! p_base_x3' & p_base_x3 p_base_x3' | & ! p_base_x4 ! p_base_x4' & p_base_x4 p_base_x4' | & ! p_block_t ! p_block_t' & p_block_t p_block_t' | & ! p_block_k0 ! p_block_k0' & p_block_k0 p_block_k0' | & ! p_block_k1 ! p_block_k1' & p_block_k1 p_block_k1' | & ! p_block_k2 ! p_block_k2' & p_block_k2 p_block_k2' | & ! p_block_k3 ! p_block_k3' & p_block_k3 p_block_k3' | & ! p_block_ee ! p_block_ee' & p_block_ee p_block_ee'
+| | | | | | | | & & & & & & & skill0 ! skill1 ! skill2 ! skill3 ! skill4 ! skill5 ! skill6 ! skill7 & & & & & & & ! skill0 skill1 ! skill2 ! skill3 ! skill4 ! skill5 ! skill6 ! skill7 & & & & & & & ! skill0 ! skill1 skill2 ! skill3 ! skill4 ! skill5 ! skill6 ! skill7 & & & & & & & ! skill0 ! skill1 ! skill2 skill3 ! skill4 ! skill5 ! skill6 ! skill7 & & & & & & & ! skill0 ! skill1 ! skill2 ! skill3 skill4 ! skill5 ! skill6 ! skill7 & & & & & & & ! skill0 ! skill1 ! skill2 ! skill3 ! skill4 skill5 ! skill6 ! skill7 & & & & & & & ! skill0 ! skill1 ! skill2 ! skill3 ! skill4 ! skill5 skill6 ! skill7 & & & & & & & ! skill0 ! skill1 ! skill2 ! skill3 ! skill4 ! skill5 ! skill6 skill7 & & & & & & & ! skill0 ! skill1 ! skill2 ! skill3 ! skill4 ! skill5 ! skill6 ! skill7
+
+[ENV_INIT]
+! p_cup_t
+! p_cup_k0
+! p_cup_k1
+! p_cup_k2
+! p_cup_k3
+! p_cup_ee
+! p_base_x0
+! p_base_x1
+! p_base_x2
+! p_base_x3
+! p_base_x4
+! p_cone_x0
+! p_cone_x1
+! p_cone_x2
+! p_cone_x3
+! p_cone_x4
+! p_block_t
+! p_block_k0
+! p_block_k1
+! p_block_k2
+! p_block_k3
+! p_block_ee
+! p_plate_t
+! p_plate_k0
+! p_plate_k1
+! p_plate_k2
+! p_plate_k3
+! p_plate_ee
+! empty
+
+[SYS_TRANS]
+| ! ! | & & & & & & & & & & & & & & & & & & & & & & p_base_x0 ! p_base_x1 ! p_base_x2 ! p_base_x3 ! p_base_x4 ! p_cup_k0 ! p_cup_k1 ! p_cup_k2 ! p_cup_k3 ! p_cup_t p_cup_ee skill0 ! p_base_x0' ! p_base_x1' p_base_x2' ! p_base_x3' ! p_base_x4' ! p_cup_k0' ! p_cup_k1' ! p_cup_k2' ! p_cup_k3' ! p_cup_t' p_cup_ee' & & & & & & & & & & p_base_x0' ! p_base_x1' ! p_base_x2' ! p_base_x3' ! p_base_x4' ! p_cup_k0' ! p_cup_k1' ! p_cup_k2' ! p_cup_k3' ! p_cup_t' p_cup_ee' ! skill0'
+| ! ! | & & & & & & & & & & & & & & & & & & & & & & ! p_base_x0 ! p_base_x1 ! p_base_x2 ! p_base_x3 p_base_x4 ! p_cup_k0 ! p_cup_k1 ! p_cup_k2 ! p_cup_k3 ! p_cup_t p_cup_ee skill1 ! p_base_x0' ! p_base_x1' p_base_x2' ! p_base_x3' ! p_base_x4' ! p_cup_k0' ! p_cup_k1' ! p_cup_k2' ! p_cup_k3' ! p_cup_t' p_cup_ee' & & & & & & & & & & ! p_base_x0' ! p_base_x1' ! p_base_x2' ! p_base_x3' p_base_x4' ! p_cup_k0' ! p_cup_k1' ! p_cup_k2' ! p_cup_k3' ! p_cup_t' p_cup_ee' ! skill1'
+| ! ! & & & & & & & & & & ! p_base_x0' ! p_base_x1' ! p_base_x2' ! p_base_x3' p_base_x4' ! p_cup_k0' ! p_cup_k1' p_cup_k2' ! p_cup_k3' ! p_cup_t' ! p_cup_ee' ! skill2'
+| ! ! & & & & & & & & & & p_base_x0' ! p_base_x1' ! p_base_x2' ! p_base_x3' ! p_base_x4' ! p_cup_k0' ! p_cup_k1' ! p_cup_k2' ! p_cup_k3' p_cup_t' ! p_cup_ee' ! skill3'
+| ! ! & & & & & & & & & & ! p_base_x0' ! p_base_x1' ! p_base_x2' ! p_base_x3' p_base_x4' ! p_block_k0' p_block_k1' ! p_block_k2' ! p_block_k3' ! p_block_t' ! p_block_ee' ! skill4'
+| ! ! & & & & & & & & & & ! p_base_x0' ! p_base_x1' ! p_base_x2' ! p_base_x3' p_base_x4' ! p_cup_k0' ! p_cup_k1' ! p_cup_k2' ! p_cup_k3' ! p_cup_t' p_cup_ee' ! skill5'
+| ! ! & & & & & & & & & & p_base_x0' ! p_base_x1' ! p_base_x2' ! p_base_x3' ! p_base_x4' ! p_cup_k0' ! p_cup_k1' ! p_cup_k2' ! p_cup_k3' ! p_cup_t' p_cup_ee' ! skill6'
+| ! ! & & & & & & & & & & ! p_base_x0' ! p_base_x1' ! p_base_x2' ! p_base_x3' p_base_x4' ! p_block_k0' ! p_block_k1' ! p_block_k2' ! p_block_k3' ! p_block_t' p_block_ee' ! skill7'
+| ! & & & & & & & & & & & & & & & & & & & & & & p_base_x0 ! p_base_x1 ! p_base_x2 ! p_base_x3 ! p_base_x4 ! p_cup_k0 ! p_cup_k1 ! p_cup_k2 ! p_cup_k3 ! p_cup_t p_cup_ee skill0 ! p_base_x0' ! p_base_x1' p_base_x2' ! p_base_x3' ! p_base_x4' ! p_cup_k0' ! p_cup_k1' ! p_cup_k2' ! p_cup_k3' ! p_cup_t' p_cup_ee' skill0'
+| ! & & & & & & & & & & & & & & & & & & & & & & ! p_base_x0 ! p_base_x1 ! p_base_x2 ! p_base_x3 p_base_x4 ! p_cup_k0 ! p_cup_k1 ! p_cup_k2 ! p_cup_k3 ! p_cup_t p_cup_ee skill1 ! p_base_x0' ! p_base_x1' p_base_x2' ! p_base_x3' ! p_base_x4' ! p_cup_k0' ! p_cup_k1' ! p_cup_k2' ! p_cup_k3' ! p_cup_t' p_cup_ee' skill1'
+| ! & & p_cup_ee empty ! p_base_x0 ! p_base_x0'
+| ! & & p_cup_ee ! empty ! p_base_x4 ! p_base_x4'
+| ! & p_block_k1 p_cup_k2 ! p_cup_ee'
+! & p_cup_t p_block_t
+! & p_cup_t' p_block_t'
+! & p_cup_t p_plate_t
+! & p_cup_t' p_plate_t'
+! & p_block_t p_plate_t
+! & p_block_t' p_plate_t'
+! & p_cup_k0 p_block_k0
+! & p_cup_k0' p_block_k0'
+! & p_cup_k0 p_plate_k0
+! & p_cup_k0' p_plate_k0'
+! & p_block_k0 p_plate_k0
+! & p_block_k0' p_plate_k0'
+! & p_cup_k1 p_block_k1
+! & p_cup_k1' p_block_k1'
+! & p_cup_k1 p_plate_k1
+! & p_cup_k1' p_plate_k1'
+! & p_block_k1 p_plate_k1
+! & p_block_k1' p_plate_k1'
+! & p_cup_k2 p_block_k2
+! & p_cup_k2' p_block_k2'
+! & p_cup_k2 p_plate_k2
+! & p_cup_k2' p_plate_k2'
+! & p_block_k2 p_plate_k2
+! & p_block_k2' p_plate_k2'
+! & p_cup_k3 p_block_k3
+! & p_cup_k3' p_block_k3'
+! & p_cup_k3 p_plate_k3
+! & p_cup_k3' p_plate_k3'
+! & p_block_k3 p_plate_k3
+! & p_block_k3' p_plate_k3'
+! & p_base_x0 p_cone_x0
+! & p_base_x0' p_cone_x0'
+! & p_base_x1 p_cone_x1
+! & p_base_x1' p_cone_x1'
+! & p_base_x2 p_cone_x2
+! & p_base_x2' p_cone_x2'
+! & p_base_x3 p_cone_x3
+! & p_base_x3' p_cone_x3'
+! & p_base_x4 p_cone_x4
+! & p_base_x4' p_cone_x4'
+! & p_cup_ee p_block_ee
+! & p_cup_ee' p_block_ee'
+! & p_cup_ee p_plate_ee
+! & p_cup_ee' p_plate_ee'
+! & p_block_ee p_plate_ee
+! & p_block_ee' p_plate_ee'
+| | | | | | | | & & & & & & & skill0' ! skill1' ! skill2' ! skill3' ! skill4' ! skill5' ! skill6' ! skill7' & & & & & & & ! skill0' skill1' ! skill2' ! skill3' ! skill4' ! skill5' ! skill6' ! skill7' & & & & & & & ! skill0' ! skill1' skill2' ! skill3' ! skill4' ! skill5' ! skill6' ! skill7' & & & & & & & ! skill0' ! skill1' ! skill2' skill3' ! skill4' ! skill5' ! skill6' ! skill7' & & & & & & & ! skill0' ! skill1' ! skill2' ! skill3' skill4' ! skill5' ! skill6' ! skill7' & & & & & & & ! skill0' ! skill1' ! skill2' ! skill3' ! skill4' skill5' ! skill6' ! skill7' & & & & & & & ! skill0' ! skill1' ! skill2' ! skill3' ! skill4' ! skill5' skill6' ! skill7' & & & & & & & ! skill0' ! skill1' ! skill2' ! skill3' ! skill4' ! skill5' ! skill6' skill7' & & & & & & & ! skill0' ! skill1' ! skill2' ! skill3' ! skill4' ! skill5' ! skill6' ! skill7'
+
+[SYS_INIT]
+! skill0
+! skill1
+! skill2
+! skill3
+! skill4
+! skill5
+! skill6
+! skill7
+
+[ENV_LIVENESS]
+
+[SYS_LIVENESS]
+| ! empty p_cup_k2
+| ! ! empty p_cup_t
+

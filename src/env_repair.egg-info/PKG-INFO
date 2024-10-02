@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: env_repair
+Version: 0.0.0
+Summary: The env_repair package
+Author: 
+Maintainer: Qian Meng
+Maintainer-email: martinmq99@gmail.com
+License: MIT
+License-File: LICENSE

@@ -14,7 +14,7 @@ from tools import print_debug
 DEBUG = False
 
 class MobileController(BaseController):
-    def __init__(self, x: np.float32 = None, y: np.float32 = None, t = None, tf_prefix="", transform_listener=None, base_only = True):
+    def __init__(self, x: np.float = None, y: np.float = None, t = None, tf_prefix="", transform_listener=None, base_only = True):
         # print(t)
         # return
         super().__init__(x, y, t, tf_prefix, transform_listener, base_only)
@@ -69,8 +69,8 @@ if __name__ == '__main__':
         parser.add_argument('-t', action='store', dest='t', default='0')
         args = parser.parse_args()
         controller = MobileController(
-            np.float32(args.x), np.float32(args.y), np.float32(args.t))
-        controller.set_path([[np.float32(args.x), np.float32(args.y), -np.float32(args.t)]])
+            np.float(args.x), np.float(args.y), np.float(args.t))
+        controller.set_path([[np.float(args.x), np.float(args.y), -np.float(args.t)]])
         # controller.set_path([[2, 1, 1.57], [-2, 1, 3], [6, -2, -1.57]])
         # controller.set_path_region([[[0, 1], [0, 1]], [[0, 1], [1, 2]], [[0, 1], [2, 3]], [[1, 2], [2, 3]]])
         # rospy.sleep(1)

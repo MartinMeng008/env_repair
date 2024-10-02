@@ -8,7 +8,7 @@ import copy
 import numpy as np
 import threading
 
-from .tools import (json_load_wrapper, 
+from tools import (json_load_wrapper, 
                    symbol_to_object_location, 
                    dump_json,
                    create_symbol_dict,
@@ -20,7 +20,7 @@ from .tools import (json_load_wrapper,
                    find_controllable_manipulation_symbols,
                    assert_exit,)
 
-from env_repair.src.controller.main_controller import MainController
+from controller.main_controller import MainController
 
 DEBUG = False
 CREATE_SYMBOLS_ONLY = False

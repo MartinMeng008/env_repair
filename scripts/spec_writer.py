@@ -603,7 +603,8 @@ class SpecWriter:
         self.write_change_constraints(target_filename, inputs_data, locations_data, objects_data, opts, uncontrollable_inputs, user_inputs)
 
         # NOT ALLOWED REPAIR
-        self.write_not_allowed_repair(target_filename, inputs_data, locations_data, objects_data, spec_data['not_allowed_repair'], opts, uncontrollable_inputs, user_inputs)
+        if 'not_allowed_repair' in spec_data.keys():
+            self.write_not_allowed_repair(target_filename, inputs_data, locations_data, objects_data, spec_data['not_allowed_repair'], opts, uncontrollable_inputs, user_inputs)
         # write_section(target_filename, "NOT_ALLOWED_REPAIR", spec_data['not_allowed_repair'])
 
 def test_spec_realizability(files_json):

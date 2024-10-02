@@ -6,9 +6,7 @@ import hello_helpers.hello_misc as hm
 import threading
 from sensor_msgs.msg import JointState
 
-import sys
-sys.path.insert(0, '../scripts')
-from tools import (print_debug, are_array_close)
+from env_repair.scripts.tools import (print_debug, are_array_close)
 
 DEBUG = False
 

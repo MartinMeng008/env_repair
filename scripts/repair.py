@@ -2,8 +2,8 @@
 import sys
 import numpy as np
 import argparse
-from .monitor_compiler import Compiler
-from .tools import (json_load_wrapper,
+from monitor_compiler import Compiler
+from tools import (json_load_wrapper,
                    find_controllable_symbols,
                    varlist2prime,
                    varlist2doubleprime,

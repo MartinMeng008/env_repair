@@ -9,9 +9,7 @@ from geometry_msgs.msg import (
     PoseStamped, 
     TransformStamped
 )
-import sys
-sys.path.insert(0, '../scripts')
-from tools import (
+from env_repair.scripts.tools import (
     pose_to_particle
 )
 import time
