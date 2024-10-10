@@ -1,4 +1,5 @@
 {
+    "env_init_true": ["p_cup_k2", "p_cone_x3", "p_base_x4", "p_block_k1", "p_plate_k3"],
     "sys_init_true": [],
     "env_live": "",
     "sys_live": "empty -> p_cup_k2\n!empty -> p_cup_t\n",
