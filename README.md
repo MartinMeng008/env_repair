@@ -34,7 +34,7 @@ This code requires python > 3 and has been tested on python 3.8.10 and Ubuntu 20
   ```shell
   git clone https://github.com/MartinMeng008/slugs.git
   export PATH=[parent_dir_of_slugs]/slugs/src:$PATH
-  export PATH=[parent_dir_of_slugs]/slugs/tools/StructuredSlugsParser:$PATH
+  export PYTHONPATH=[parent_dir_of_slugs]/slugs/tools/StructuredSlugsParser:$PYTHONPATH
   ```
 - ROS. This code has been tested on ROS Noetic. Follow the installation [instructions](http://wiki.ros.org/ROS/Installation).
 
