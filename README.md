@@ -220,10 +220,13 @@ python main.py -f inputs/[new_example]/files.json
 If you use this repository or find this project interesting, please kindly cite:
 
 ```bib
-@article{meng2024automated,
-  title={Automated Robot Recovery from Assumption Violations of High-Level Specifications},
+@INPROCEEDINGS{meng2024automated,
   author={Meng, Qian and Kress-Gazit, Hadas},
-  journal={arXiv preprint arXiv:2407.00562},
-  year={2024}
-}
+  booktitle={2024 IEEE 20th International Conference on Automation Science and Engineering (CASE)}, 
+  title={Automated Robot Recovery from Assumption Violations of High-Level Specifications}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={4154-4161},
+  doi={10.1109/CASE59546.2024.10711578}}
 ```
