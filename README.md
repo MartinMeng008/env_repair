@@ -17,7 +17,7 @@ This code requires python > 3 and has been tested on python 3.8.10 and Ubuntu 20
 
 ### Required repositories
 
-- This [fork](https://github.com/MartinMeng008/synthesis_based_repair) of synthesis_based_repair and its dependencies should be installed and added to the PATH:
+- This [fork](https://github.com/MartinMeng008/synthesis_based_repair/tree/env_relax_repair) of synthesis_based_repair and its dependencies should be installed and added to the PATH:
   - [BDD package](https://github.com/tulip-control/dd).
 
   ```shell
